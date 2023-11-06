@@ -14,7 +14,7 @@ Print your name below
 (a) Create a new SQL database called formula1
 -- SQLBook: Code
 -- Write your own code
-
+CREATE DATABASE formula1;
 -- SQLBook: Markup
 
 <font size = "5">
@@ -70,6 +70,7 @@ Hints:
 - In SQL use single quotes for logical conditions with strings '...'
 -- SQLBook: Code
 -- Write your own code
+SELECT * FROM drivers_sql
 
 -- SQLBook: Markup
 <font size = "5">
@@ -86,7 +87,8 @@ HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
 -- Write your own code
-
+SELECT COUNT(DISTINCT 'driverId')
+FROM drivers_sql
 -- SQLBook: Markup
 <font size = "5">
 
@@ -102,6 +104,10 @@ HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
 -- Write your own code
+SELECT * FROM drivers_sql
+
+
+
 
 -- SQLBook: Markup
 <font size = "5">
