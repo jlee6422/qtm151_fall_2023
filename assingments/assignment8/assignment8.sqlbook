@@ -71,6 +71,8 @@ Hints:
 -- SQLBook: Code
 -- Write your own code
 SELECT * FROM drivers_sql
+WHERE nationality = 'American'
+ORDER BY surname ASC
 
 -- SQLBook: Markup
 <font size = "5">
@@ -87,8 +89,9 @@ HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
 -- Write your own code
-SELECT COUNT(DISTINCT 'driverId')
-FROM drivers_sql
+SELECT COUNT(DISTINCT 'driverId') AS num_dist_driveId
+FROM drivers_sql;
+
 -- SQLBook: Markup
 <font size = "5">
 
@@ -109,6 +112,8 @@ SELECT * FROM drivers_sql
 
 
 
+
+
 -- SQLBook: Markup
 <font size = "5">
 
@@ -125,3 +130,7 @@ HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
 -- Write your own code
+SELECT lap_times_sql."driverId", drivers_sql.*
+FROM lap_times_sql
+LEFT JOIN drivers_sql
+ON lap_times_sql."driverId" = drivers_sql."driverId";
